@@ -4,7 +4,7 @@ export const baseTypeCode = () => {
   let nickname: string = "阿强";
   let count: number = 42;
   let isDone: boolean = false;
-  let big: bigint = 100n;
+  // let big: bigint = 100n;
   let symbol: symbol = Symbol("id");
 };
 export const baseTypeCodeStr = `
