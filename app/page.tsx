@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -59,6 +61,7 @@ export default function Home() {
             Documentation
           </a>
         </div>
+        <Link href="/about">关于</Link>
       </main>
     </div>
   );
