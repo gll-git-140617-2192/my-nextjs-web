@@ -82,7 +82,6 @@ export function LoginForm() {
           </Form.Item>
           <Link
             href="/reset-password"
-            size="small"
             className="text-blue-600 text-sm hover:underline"
           >
             忘记密码?

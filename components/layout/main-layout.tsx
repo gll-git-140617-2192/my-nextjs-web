@@ -173,7 +173,6 @@ function BlogMinimalistLayout({ children }: { children: React.ReactNode }) {
                 strokeLinejoin="round"
                 strokeWidth={2}
                 d=" orbit 5 15l7-7 7 7" // 这是一个简单的向上箭头
-                d="M5 15l7-7 7 7"
               />
             </svg>
           </button>
