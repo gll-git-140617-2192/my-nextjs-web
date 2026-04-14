@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Dropdown, Avatar, Space } from "antd";
+import { Dropdown, Avatar, Space,type MenuProps } from "antd";
 import {
   UserOutlined,
   LogoutOutlined,
@@ -15,7 +15,7 @@ export default function HeaderBar() {
   const router = useRouter();
 
   // 定义下拉菜单的操作
-  const menuItems = [
+  const menuItems: MenuProps["items"] = [
     {
       key: "reset-password",
       icon: <KeyOutlined />,
