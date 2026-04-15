@@ -150,7 +150,7 @@ function BlogMinimalistLayout({ children }: { children: React.ReactNode }) {
           })}
         </div>
       </div>
-      <div className="bg-white p-6 rounded-2xl shadow-sm w-3/5 mb-12 flex-1 mt-4">
+      <div className="bg-white p-6 rounded-2xl shadow-sm w-3/5 mb-12 flex-1 mt-4 overflow-hidden">
         {children}
       </div>
       {/* 右侧悬浮面板 (回到顶部) */}
@@ -173,6 +173,7 @@ function BlogMinimalistLayout({ children }: { children: React.ReactNode }) {
                 strokeLinejoin="round"
                 strokeWidth={2}
                 d=" orbit 5 15l7-7 7 7" // 这是一个简单的向上箭头
+                d="M5 15l7-7 7 7"
               />
             </svg>
           </button>

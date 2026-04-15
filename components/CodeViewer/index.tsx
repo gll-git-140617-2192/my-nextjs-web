@@ -3,7 +3,14 @@
 import React, { useState, useEffect } from "react";
 import { Check, Copy, Loader2 } from "lucide-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneLight, oneDark,atomDark,vscDarkPlus, vs, prism } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  oneLight,
+  oneDark,
+  atomDark,
+  vscDarkPlus,
+  vs,
+  prism,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 import {
   Accordion,
   AccordionContent,
@@ -120,7 +127,7 @@ export const CodeViewer = ({
           </div>
 
           <AccordionContent className="p-0 border-t border-slate-50">
-            <div className="relative w-full overflow-hidden bg-white">
+            <div className="relative w-full min-w-0 max-h-250 overflow-auto bg-white">
               <SyntaxHighlighter
                 language={language}
                 style={prism}
@@ -139,7 +146,11 @@ export const CodeViewer = ({
                   lineHeight: "1.7",
                   background: "transparent",
                   margin: 0,
+                  // 彻底封死溢出的三个属性
+                  display: "block",
                   width: "100%",
+                  overflowX: "auto",
+                  whiteSpace: "pre", // 保持代码格式不折行，但允许滚动
                 }}
               />
             </div>

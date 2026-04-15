@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import path from 'path';
 const TsStudy = dynamic(() => import('../app/blogs/ts-study/page'))
+const NodeStudy = dynamic(() => import('../app/blogs/node-study/intro/page'))
 
 export const BLOG_CONFIG = [
   {
@@ -9,6 +10,28 @@ export const BLOG_CONFIG = [
     type: 'local',
     path: '/blogs/ts-study',
     component: <TsStudy />,
+  },
+  {
+    id: 'node-study',
+    title: 'Node学习指南',
+    type: 'local',
+    path: '/blogs/node-study',
+    children: [
+      {
+        id: 'node-study-intro',
+        title: 'Node简介',
+        path: '/blogs/node-study/intro',
+        type: 'local',
+        component: <NodeStudy />,
+      },
+      {
+        id: 'node-study-2',
+        title: 'Node学习指南2',
+        path: '/blogs/node-study-2',
+        type: 'local',
+        component: <NodeStudy />,
+      },
+    ]
   },
   {
     id: 'guide',
